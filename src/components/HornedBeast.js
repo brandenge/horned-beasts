@@ -5,10 +5,9 @@ class HornedBeast extends React.Component {
   constructor(props) {
     super(props);
     this.state = { favoritesCount: 0 };
-    this.increment = this.increment.bind(this);
   }
 
-  increment() {
+  increment = () => {
     this.setState({ favoritesCount: this.state.favoritesCount + 1 });
   }
 
