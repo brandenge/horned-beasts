@@ -33,12 +33,13 @@ const hornedBeasts = [
 class Main extends React.Component {
 
   render() {
-    return (
-      <>
-        <HornedBeast title='Unicorn' imageUrl='https://unicorn.com' description='A mythical animal' />
-        <HornedBeast title='Demon' imageUrl='https://demon.com' description='An evil beast' />
-      </>
-    );
+    const hornedBeastComponents = hornedBeasts.map(hornedBeast => {
+      return <HornedBeast
+                title={hornedBeast.title}
+                imageUrl={hornedBeast.image_url}
+                description={hornedBeast.description} />
+    });
+    return <>{hornedBeastComponents}</>
   }
 }
 
