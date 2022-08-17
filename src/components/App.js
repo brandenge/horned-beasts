@@ -17,8 +17,12 @@ class App extends React.Component {
 
   toggler = e => {
     const tagName = e.target.parentElement.tagName.toLowerCase();
-    this.state.toggles[tagName] = !this.state.toggles[tagName];
-    this.setState(this.state);
+    this.setState({
+      toggles: {
+        ...this.state.toggles,
+        [tagName]: !this.state.toggles[tagName]
+      }
+    });
   }
 
   render = () => {
