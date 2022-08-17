@@ -18,19 +18,19 @@ Estimate of time needed to complete: 45 minutes
 
 Start time: 5:57
 
-Finish time: _____
+Finish time: 6:34
 
-Actual time needed to complete: _____
+Actual time needed to complete: 37 minutes
 
 ### Feature #3: Bootstrap
 
 Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 7:25
 
-Finish time: _____
+Finish time: 9:55
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2.5 hours
 
 ### Feature #4: Add Interaction
 
