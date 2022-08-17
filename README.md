@@ -51,3 +51,23 @@ Start time: 12:05
 Finish time: 12:50
 
 Actual time needed to complete: 45 minutes
+
+### Feature #6: Display a Model
+
+Estimate of time needed to complete: 1 hour
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
+
+### Feature #7: Fuzzy Search
+
+Estimate of time needed to complete: 2 hours
+
+Start time: _____
+
+Finish time: _____
+
+Actual time needed to complete: _____
