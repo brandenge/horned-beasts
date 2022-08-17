@@ -5,13 +5,28 @@ import Main from './Main';
 import Footer from './Footer';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      toggles: {
+        header: true,
+        footer: true
+      }
+    };
+  }
 
-  render() {
+  toggler = e => {
+    const tagName = e.target.parentElement.tagName.toLowerCase();
+    this.state.toggles[tagName] = !this.state.toggles[tagName];
+    this.setState(this.state);
+  }
+
+  render = () => {
     return (
       <>
-        <Header />
+        <Header handleClick={this.toggler} isToggled={this.state.toggles.header} />
         <Main />
-        <Footer />
+        <Footer handleClick={this.toggler} isToggled={this.state.toggles.footer} />
       </>
     );
   }

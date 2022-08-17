@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 
 class Main extends React.Component {
 
-  render() {
+  render = () => {
     const hornedBeastComponents = hornedBeasts.map(hornedBeast => {
       return (
         <Col style={{padding: '0px'}} key={hornedBeast._id}>

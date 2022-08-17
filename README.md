@@ -36,11 +36,11 @@ Actual time needed to complete: 2.5 hours
 
 Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 9:55
 
-Finish time: _____
+Finish time: 12:05
 
-Actual time needed to complete: _____
+Actual time needed to complete: 2 hrs 10 min
 
 ### Feature #5: Deploy on Netlify
 
