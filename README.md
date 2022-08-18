@@ -58,9 +58,9 @@ Estimate of time needed to complete: 1 hour
 
 Start time: 4:20 pm
 
-Finish time: _____
+Finish time: 12:20
 
-Actual time needed to complete: _____
+Actual time needed to complete: 8 hours
 
 ### Feature #7: Fuzzy Search
 
