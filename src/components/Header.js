@@ -14,8 +14,12 @@ function Header(props) {
     };
   }
   return (
-    <header onClick={props.handleClick}>
-      <h1 style={style}>{title}</h1>
+    <header>
+      <label>
+        Search:
+        <input type="search"/>
+      </label>
+      <h1 onClick={props.handleClick} style={style}>{title}</h1>
     </header>
   );
 }

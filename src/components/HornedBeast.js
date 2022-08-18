@@ -9,17 +9,21 @@ class HornedBeast extends React.Component {
   }
 
   increment = () => {
-    this.setState({ favoritesCount: this.state.favoritesCount + 1 });
+    this.setState({favoritesCount: this.state.favoritesCount + 1});
   }
 
   render() {
     return (
       <Card className='card'>
-        <Card.Img variant='top' src={this.props.imageUrl}
-          onClick={this.increment} alt={this.props.description} title={this.props.title} />
-        <Card.Body>
-          <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text>{this.props.description}</Card.Text>
+        <Card.Img variant='top' src={this.props.hornedBeast.image_url}
+          onClick={() => {
+            this.props.selected(this.props.hornedBeast);
+            this.props.onShow();
+          }}
+          alt={this.props.hornedBeast.description} title={this.props.hornedBeast.title}/>
+        <Card.Body onClick={this.increment}>
+          <Card.Title>{this.props.hornedBeast.title}</Card.Title>
+          <Card.Text>{this.props.hornedBeast.description}</Card.Text>
           <Card.Footer>❤️ Number of Favorites: {this.state.favoritesCount}</Card.Footer>
         </Card.Body>
       </Card>
