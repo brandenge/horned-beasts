@@ -15,7 +15,7 @@ class App extends React.Component {
       },
       show: false,
       hornedBeasts: data,
-      selected: data[0]
+      selected: data[0],
     };
   }
 
@@ -37,18 +37,36 @@ class App extends React.Component {
   }
 
   selectedHornedBeast = clickedBeast => {
-    let selectedBeast = this.state.hornedBeasts.find(hornedBeast => hornedBeast._id === clickedBeast._id);
+    const selectedBeast = this.state.hornedBeasts.find(hornedBeast => hornedBeast._id === clickedBeast._id);
     this.setState({selected: selectedBeast});
   };
+
+  selectedNumberOfHorns = e => {
+    if (+e.target.value === 0) this.setState({hornedBeasts: data});
+    else {
+      const beastsByHornCount = data.filter(hornedBeast => hornedBeast.horns === +e.target.value);
+      this.setState({hornedBeasts: beastsByHornCount});
+    }
+  }
 
   render = () => {
     return (
       <>
-        <Header handleClick={this.toggler} isToggled={this.state.toggles.header}/>
-        <Main onShow={this.handleOpen} hornedBeasts={this.state.hornedBeasts}
+        <Header
+          handleClick={this.toggler}
+          isToggled={this.state.toggles.header}
+          selectedNumberOfHorns={this.selectedNumberOfHorns}/>
+        <Main
+          onShow={this.handleOpen}
+          hornedBeasts={this.state.hornedBeasts}
           selected={this.selectedHornedBeast}/>
-        <SelectedBeast show={this.state.show} onHide={this.handleClose} selected={this.state.selected}/>
-        <Footer handleClick={this.toggler} isToggled={this.state.toggles.footer}/>
+        <SelectedBeast
+          show={this.state.show}
+          onHide={this.handleClose}
+          selected={this.state.selected}/>
+        <Footer
+          handleClick={this.toggler}
+          isToggled={this.state.toggles.footer}/>
       </>
     );
   }

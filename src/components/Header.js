@@ -27,8 +27,8 @@ function Header(props) {
             Search
           </Button>
         </InputGroup>
-        <Form.Select size='lg'>
-          <option>Open this select menu</option>
+        <Form.Select size='lg' onChange={props.selectedNumberOfHorns}>
+          <option value='0'>Open this select menu</option>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
